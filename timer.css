@@ -1,42 +1,62 @@
-#task{
-    white-space: nowrap;
+body {
+    background-color: #3D3D3D;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.4);
+    padding: 20px;
+}
+
+#task {
+    margin-top: 10vh;
+    text-align: center;
     font-weight: bold;
     color: white;
     font-size: 500%;
-    top:25%;
-    left:50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
     text-shadow: 5px 5px #666
 }
 
-#timeLeft{
-    white-space: nowrap;
+#time-left {
+    text-align: center;
+    font-size: 12em;
     font-weight: bold;
     color: white;
-    font-size: 2500%;
-    top:50%;
-    left:50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-    width: 50%;
 }
 
-#start{
-    white-space: nowrap;
-    font-weight: bold;
+#start-container {
+    text-align: center;
+}
+
+input[type='button'] {
+    margin-top: 0.5em;
+    padding: 0.5em 0.8em;
+    border: none;
+    border-radius: 7px;
+    font-size: 2.2em;
     color: white;
-    font-size: 2000%;
-    top:50%;
-    left:50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
 }
 
-body{
-    background-color: #3D3D3D;
-    font-family: 'Oswald', sans-serif;
-    text-shadow: 5px 5px #666
+.green {
+    background-color: #4CAF50;
+}
+
+.red {
+    background-color: #f44336;
+}
+
+.gray {
+    background-color: #999;
+}
+
+#progress-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2em;
+    background-color: #999;
+}
+
+#progressbar {
+    height: 2em;
+    background-color: #4CDF50;
+    width: 0%;
 }

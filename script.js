@@ -22,11 +22,6 @@ var pretickLength = 900;
 var tickLength = 10;
 var unpreciseTickLength = 5000;
 
-window.onload = function() {
-    document.addEventListener('visibilitychange', handleVisibilityChange, false);
-
-    $("#start").click();
-};
 
 function starting() {
     var time = Date.now();
@@ -86,19 +81,21 @@ function display() {
     if (seconds < 10) seconds = '0' + seconds;
     document.getElementById('minutes').innerText = minutes;
     document.getElementById('seconds').innerText = seconds;
+
+    var width = (length - remaining) / length;
+    $('#progressbar').css('width', (width * 100) + '%');
 }
 
 function pomodoro() {
     isWork = true;
     isBreak = false;
     length = 60 * defaultPomodoro;
-    $("#start").css("visibility", "hidden")
-    $("#task").css("visibility", "visible")
-    $("#timeLeft").css("visibility", "visible")
+    $("#start").css("visibility", "hidden");
+    $("#task").css("visibility", "visible");
+    $("#time-left").css("visibility", "visible");
     $("#task").html("Get to work!");
     audioWork.play();
     starting();
-    cycleCount += 1;
 }
 
 function pomodoro_break() {
@@ -126,3 +123,10 @@ function handleVisibilityChange() {
         timer = window.setInterval(tick, unpreciseTickLength);
     }
 }
+
+window.onload = function() {
+    document.addEventListener('visibilitychange', handleVisibilityChange, false);
+
+    $('#pomodoro').click(pomodoro);
+    $('#break').click(pomodoro_break);
+};
