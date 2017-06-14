@@ -101,12 +101,12 @@ function pomodoro_break() {
     isBreak = true;
     isWork = false;
 
-    if (cycleCount % 4 != 0) {
-        // Short break
-        length = 60 * defaultShortBreak;
-    } else {
+    if (cycleCount % 4 == 0 && cycleCount != 0) {
         // Long break
         length = 60 * defaultLongBreak;
+    } else {
+        // Short break
+        length = 60 * defaultShortBreak;
     }
     $("#task").html("Take a break!");
     $("#pomodoro").removeClass('green');
