@@ -1,8 +1,9 @@
 body {
     background-color: #3D3D3D;
     font-family: 'Oswald', sans-serif;
-    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.4);
-    padding: 20px;
+    text-shadow: 0 3px 10px rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    font-size: 8px;
 }
 
 #task {
@@ -10,8 +11,7 @@ body {
     text-align: center;
     font-weight: bold;
     color: white;
-    font-size: 500%;
-    text-shadow: 5px 5px #666
+    font-size: 5em;
 }
 
 #time-left {
@@ -59,4 +59,20 @@ input[type='button'] {
     height: 2em;
     background-color: #4CDF50;
     width: 0%;
+}
+
+@media (min-width: 500px) {
+    body {
+        font-size:15px;
+    }
+}
+@media (min-width: 750px) {
+    body {
+        font-size:18px;
+    }
+}
+@media (min-width: 1000px) {
+    body {
+        font-size:21px;
+    }
 }
