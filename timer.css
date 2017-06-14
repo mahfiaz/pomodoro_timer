@@ -1,6 +1,6 @@
 body {
     background-color: #3D3D3D;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', 'Arial', sans-serif;
     text-shadow: 0 3px 10px rgba(255, 255, 255, 0.4);
     padding: 15px;
     font-size: 8px;
@@ -25,13 +25,15 @@ body {
     text-align: center;
 }
 
-input[type='button'] {
-    margin-top: 0.5em;
+.button {
+    margin: 0.5em;
     padding: 0.5em 0.8em;
     border: none;
     border-radius: 7px;
+    font-family: 'Oswald', 'Arial', sans-serif;
     font-size: 2.2em;
     color: white;
+    background-color: #999;
 }
 
 .green {
@@ -40,10 +42,6 @@ input[type='button'] {
 
 .red {
     background-color: #f44336;
-}
-
-.gray {
-    background-color: #999;
 }
 
 #progress-container {

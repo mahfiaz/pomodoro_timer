@@ -83,17 +83,16 @@ function display() {
     document.getElementById('seconds').innerText = seconds;
 
     var width = (length - remaining) / length;
-    $('#progressbar').css('width', (width * 100) + '%');
+    document.getElementById('progressbar').style.width = (width * 100) + '%';
 }
 
 function pomodoro() {
     isWork = true;
     isBreak = false;
     length = 60 * defaultPomodoro;
-    $("#start").css("visibility", "hidden");
-    $("#task").css("visibility", "visible");
-    $("#time-left").css("visibility", "visible");
     $("#task").html("Get to work!");
+    $("#pomodoro").addClass('green');
+    $("#break").removeClass('red');
     audioWork.play();
     starting();
 }
@@ -110,6 +109,8 @@ function pomodoro_break() {
         length = 60 * defaultLongBreak;
     }
     $("#task").html("Take a break!");
+    $("#pomodoro").removeClass('green');
+    $("#break").addClass('red');
     audioBreak.play();
     starting();
 }
