@@ -7,13 +7,14 @@
     <title>Pomodoro Timer</title>
     <script src="script.js" charset="utf-8"></script>
     <script src="jquery-3.2.1.min.js" charset="utf-8"></script>
+     <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="timer.css">
 </head>
 <body>
     <div id="start"><input type="submit" onclick="pomodoro()" value="Alusta"></div>
     <div id="task"></div>
     <div id="timeLeft">
-        <span id="minutes"></span>:<span id="seconds"></span>
+        <span id="minutes"></span><span id="separator">:</span><span id="seconds"></span>
     </div>
 </body>
 </html>
