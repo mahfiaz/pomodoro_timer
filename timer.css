@@ -21,6 +21,19 @@ body {
     color: white;
 }
 
+#minutes, #seconds {
+    display: inline-block;
+    width: 1.1em;
+}
+
+#minutes {
+    text-align: right;
+}
+
+#seconds {
+    text-align: left;
+}
+
 #start-container {
     text-align: center;
 }
